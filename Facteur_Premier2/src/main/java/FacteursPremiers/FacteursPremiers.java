@@ -12,19 +12,25 @@ public class FacteursPremiers {
         Set<Integer> set = new HashSet<>();
 
 
-        if (i % 2 ==0){
+        while(i % 2 ==0){
             set.add(2);
+            i /= 2;
         }
 
-        if (i % 3 ==0){
+        while (i % 3 ==0){
             set.add(3);
+            i /= 3;
         }
 
-        for (int j=3; j <= Math.sqrt(i); j+=2){
+        for (int j = 3; j <= Math.sqrt(i); j+=2){
             while(i % j == 0){
                 set.add(j);
                 i /= j;
             }
+        }
+
+        if (i>2){
+            set.add(2);
         }
 
         return set;

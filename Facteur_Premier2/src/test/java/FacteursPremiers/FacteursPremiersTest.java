@@ -53,4 +53,14 @@ class FacteursPremiersTest {
         assertEquals(set, Set.of(2,3));
     }
 
+    @Test
+    public void test8_return_22(){
+
+        //When
+        Set<Integer> set = facteursPremiers.generate(8);
+
+        //Then
+        assertEquals(set, Arrays.asList(2,2));
+    }
+
 }
