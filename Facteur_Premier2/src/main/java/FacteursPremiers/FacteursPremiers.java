@@ -11,7 +11,14 @@ public class FacteursPremiers {
     public Set<Integer> generate(int i) {
         Set<Integer> set = new HashSet<>();
 
-        return set;
+        if (i == 1) {
+            return set;
+        }
 
+        if (i == 2){
+            set.add(2);
+            return set;
+        }
+        return set;
     }
 }
