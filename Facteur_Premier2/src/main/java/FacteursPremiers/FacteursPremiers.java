@@ -15,9 +15,11 @@ public class FacteursPremiers {
             return set;
         }
 
-        if (i == 2){
-            set.add(2);
-            return set;
+        for (int j = 2; j <= i; j++) {
+            while (i % j == 0) {
+                set.add(j);
+                i /= j;
+            }
         }
         return set;
     }

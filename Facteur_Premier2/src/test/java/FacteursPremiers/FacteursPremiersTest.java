@@ -29,4 +29,14 @@ class FacteursPremiersTest {
         //Then
         assertEquals(set, Set.of(2));
     }
+
+    @Test
+    public void test3_return_23(){
+
+        //When
+        Set<Integer> set = facteursPremiers.generate(6);
+
+        //Then
+        assertEquals(set, Set.of(2,3));
+    }
 }
